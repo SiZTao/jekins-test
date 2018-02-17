@@ -8,19 +8,20 @@
     -->
     <groupId>com.siztao</groupId>                   <!--表示模块所属包-->
     <artifactId>jenkins-test</artifactId>           <!--功能模块唯一标示-->
-    <version>1.0-SNAPSHOT</version>                 <!--功能模块版本-->
+    <version>1.0-SNAPSHOT</version>
+                                     <!--功能模块版本-->
     <packaging>war</packaging>                      <!--maven打包方式 pom、jar、war-->
 
     <!--    发布仓库配置    -->
     <distributionManagement>
         <!-- 两个ID必须与 setting.xml中的<server><id>nexus-rs</id></server>保持一致-->
         <repository>
-            <id>nexus-rs</id>
+            <id>releases</id>
             <name>Nexus Release Repository</name>
             <url>http://192.168.137.129:8081/nexus/content/repositories/releases/</url>
         </repository>
         <snapshotRepository>
-            <id>nexus-snapshots</id>
+            <id>snapshots</id>
             <name>Nexus Snapshot Repository</name>
             <url>http://192.168.137.129:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
